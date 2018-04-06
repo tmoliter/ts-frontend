@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { PureComponent } from 'react';
+import logo from '../../images/logo.svg';
 import './App.css';
+export class App extends PureComponent {
 
-class App extends Component {
   render() {
     return (
       <div className="App">
@@ -17,5 +17,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
