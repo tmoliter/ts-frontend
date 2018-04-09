@@ -15,6 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "docker-start": "docker-compose up -d --build"
+    "docker-start": "docker-compose up -d --build",
+    "preinstall": "touch ./src/config/config.production.js && touch ./src/config/config.qa.js"
   }
 }
