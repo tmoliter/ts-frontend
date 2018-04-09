@@ -16,7 +16,7 @@ export class App extends PureComponent {
         </p>
       <Card>
         <Headline text="This is the Headline" />
-        <Lede author="Murderdick Moliterno" text="This is the lede." />
+        <Lede author="Jeffy Spaghetti" text="This is the lede." />
       </Card>
       </div>
     );  
