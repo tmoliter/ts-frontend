@@ -8,7 +8,7 @@ export class Card extends PureComponent {
             <div className="card">
                 <div className="image-container">
                     <div className="image-source">
-                        <img src={this.props.thumbnailUrl} alt="delicious spaghett" />
+                        <img src={this.props.thumbnailUrl} height="260px" width="340px" alt="delicious spaghett" />
                     </div>
                 </div>
                 <div className="text-container">
@@ -19,7 +19,26 @@ export class Card extends PureComponent {
     }
 }
 
+export class BigCard extends PureComponent {
+
+    render() {
+        return (
+            <div className="big-card">
+                <div className="big-image-container">
+                    <div className="big-image-source">
+                        <img src={this.props.thumbnailUrl} height="540px" width="720px" alt="delicious spaghett" />
+                    </div>
+                </div>
+                <div className="big-text-container">
+                    {this.props.children}
+               </div>
+            </div>
+        );
+    }
+}
+
 Card.defaultProps = {thumbnailUrl: "https://www.gimmesomeoven.com/wp-content/uploads/2016/06/Ultra-Garlicky-Spaghetti-1-1.jpg"}
+BigCard.defaultProps = {thumbnailUrl: "https://www.gimmesomeoven.com/wp-content/uploads/2016/06/Ultra-Garlicky-Spaghetti-1-1.jpg"}
 
 export class Lede extends PureComponent {
 
@@ -37,7 +56,7 @@ export class Lede extends PureComponent {
 export class Headline extends PureComponent {
 
     render() {
-        return(
+        return( 
             <div className="headline-container">
                 <div className="headline-inner">
                     <h1>{this.props.text}</h1>

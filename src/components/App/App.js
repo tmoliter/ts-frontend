@@ -1,24 +1,50 @@
 import React, { PureComponent } from 'react';
-import logo from '../../images/logo.svg';
 import './App.css';
-import {Card, Lede, Headline } from '../Card/Card'
+import { Card, BigCard, Lede, Headline } from '../Card/Card';
+import { Navbar } from '../Navbar/Navbar';
+import { Grid } from '../Grid/Grid';
 export class App extends PureComponent {
 
   render() {
     return (  
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      <Card>
-        <Headline text="This is the Headline" />
-        <Lede author="Jeffy Spaghetti" text="This is the lede." />
-      </Card>
-      </div>
-    );  
+        <Navbar>
+          <a className="nav-item nav-link" href="tech">Tech</a>
+          <a className="nav-item nav-link" href="dev">Dev</a>
+          <a className="nav-item nav-link" href="gaming">Gaming</a>
+        </Navbar>
+        <BigCard>
+          <Headline text="Main Article" />
+          <Lede author="Main Author" text="Main lede." />
+        </BigCard>
+        <Grid numberOfColumns={3}>
+          <Card>
+            <Headline text="This is the Headline" />
+            <Lede author="Jeffy Spaghetti" text="This is the lede." />
+          </Card>
+          <Card>
+            <Headline text="This is the Headline" />
+            <Lede author="Jeffy Spaghetti" text="This is the lede." />
+          </Card>
+          <Card>
+            <Headline text="This is the Headline" />
+            <Lede author="Jeffy Spaghetti" text="This is the lede." />
+          </Card>
+          <Card>
+            <Headline text="This is the Headline" />
+            <Lede author="Jeffy Spaghetti" text="This is the lede." />
+          </Card>
+          <Card>
+            <Headline text="This is the Headline" />
+            <Lede author="Jeffy Spaghetti" text="This is the lede." />
+          </Card>
+          <Card>
+            <Headline text="This is the Headline" />
+            <Lede author="Jeffy Spaghetti" text="This is the lede." />
+          </Card>
+          
+        </Grid>
+     </div>
+    );
   }
 }
